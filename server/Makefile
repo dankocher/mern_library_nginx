@@ -19,3 +19,9 @@ down-V:
 volume:
 	docker volume inspect mern-library-nginx_mongodb-data
 
+volumes:
+	docker volume ls
+
+remove:
+	docker volume rm $(docker volume ls -qf dangling=true)
+

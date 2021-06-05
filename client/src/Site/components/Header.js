@@ -5,10 +5,12 @@ import { LinkContainer } from "react-router-bootstrap";
 const Header = () => {
    return (
       <header>
-         <Navbar bg="primary" expand="lg" variant="dark" collapseOnSelect>
+         <Navbar bg="light" expand="lg" variant="light" collapseOnSelect>
             <Container>
                <LinkContainer to="/">
-                  <Navbar.Brand>My Library</Navbar.Brand>
+                  <Navbar.Brand>
+                     My Library
+                  </Navbar.Brand>
                </LinkContainer>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">

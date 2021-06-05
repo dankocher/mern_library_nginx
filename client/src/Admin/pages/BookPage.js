@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Card, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { listBookDetails } from "../actions/bookActions";
+import { listBookDetails } from "../../actions/bookActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 

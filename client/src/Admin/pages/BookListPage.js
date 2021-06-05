@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { createBook, deleteBook, listBooks } from "../actions/bookActions";
-import { BOOK_CREATE_RESET } from "../actions/types";
+import { createBook, deleteBook, listBooks } from "../../actions/bookActions";
+import { BOOK_CREATE_RESET } from "../../actions/types";
 import Book from "../components/Book";
 import Loader from "../components/Loader";
 import Message from "../components/Message";

@@ -1,12 +1,12 @@
 version: "3.9"
 
 services:
-   library-api:
+   server:
       restart: always
       build:
          context: ./server
          dockerfile: Dockerfile.dev
-      container_name: library_mern_nginx
+      container_name: nginx
       # volumes allow sharing of data in run-time between host and container
       volumes:
          # don't overwrite this folder in container with the local one
@@ -63,27 +63,29 @@ services:
       build:
          context: ./client
          dockerfile: Dockerfile.dev
-      container_name: library_mern_frontend
+      container_name: client
       volumes:
          - ./app/node_modules
          - ./client:/app
-      # ports:
-      #    - 3000:3000
+      ports:
+         - 3030:80
       depends_on:
-         - library-api
+         - server
       networks:
          - library-mern-api
 
    nginx:
       restart: always
+      container_name: mern_library_nginx
       depends_on:
-         - library-api
+         - server
          - client
       build:
          context: ./nginx
          dockerfile: Dockerfile.dev
       ports:
-         - 8080:80
+         - 80:80
+         - 443:443
       networks:
          - library-mern-api
 
