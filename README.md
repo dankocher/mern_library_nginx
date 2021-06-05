@@ -1,11 +1,5 @@
 # Simple Library MERN App
 
-<p>
-  <a href="https://twitter.com/AlphaOmondi" target="_blank">
-    <img alt="Twitter: AlphaOmondi" src="https://img.shields.io/twitter/follow/AlphaOmondi.svg?style=social" />
-  </a>
-</p>
-
 👋 This simple Library MERN Book Application built to demonstrate how The MERN stack can be used with Docker and NGINX
 
 ## Run the Application
